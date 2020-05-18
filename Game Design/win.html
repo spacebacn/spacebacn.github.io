@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Game Over </title>
+<title> Win </title>
 <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
 <script>
 function start(){
 sjs.open();
-var gameover_text = new sjs.Text("You died.",28,"blue");
-gameover_text.centerH().offset(0,85);
+var image = new sjs.Image("https://s3-us-west-2.amazonaws.com/simplycoding/GameDesignVideos/Images/fireworks.gif");
+image.setSize(500, 400);
 
-var startBtn = new sjs.Button("Play Again???", function(){
+var win_text = new sjs.Text("You didn't die! Good job!",28,"blue");
+win_text.centerH();
+
+var startBtn = new sjs.Button("Play Again?", function(){
 window.location = "index.html";
 });
 
 startBtn.center();
 
-var score_txt = new sjs.Text("Your Score: ", 50, "orange");
-score_txt.setText("Score: "+localStorage.getItem("score"));
-
-
 } //end start
 </script>
 </head>
 <body onload="start()">
-<h1> Game Over </h1>
+<h1> You Win </h1>
 
 <div id="target" style="margin:auto;background:grey;"></div>
 </body>

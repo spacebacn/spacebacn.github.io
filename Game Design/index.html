@@ -6,23 +6,28 @@
 <script>
 function start(){
 sjs.open();
-var menu_text = new sjs.Text("Evil Robots", 28, "blue");
+var menu_text = new sjs.Text("MENU",28,"blue");
 menu_text.centerH();
-var designBtn = new sjs.Button("Design Level", function(){
-window.location = "platform.html";
+
+
+var game_text = new sjs.Text("In this game, If you are bigger than the sword, it will break. Otherwise you die. Use the arrow keys and DON'T DIE!",28,"0#ff0");
+game_text.centerH().offset(0, 30);
+
+var startBtn = new sjs.Button("Start", function(){
+window.location = "custom.html";
 });
-designBtn.center();
-var level1Btn = new sjs.Button("Level 1", function(){
-window.location = "level1.html";
-});
-level1Btn.center().offset(0, 50);
-var info_text = new sjs.Text("Created By Obi Wan Kenobi", 20, "black");
+
+startBtn.center();
+
+var info_text = new sjs.Text("Created By Seb Sobie",20,"black");
+
 info_text.bottom().centerH();
-}
+
+} //end start
 </script>
 </head>
 <body onload="start()">
-<h1> Platform Game </h1>
+<h1> Fish </h1>
 
 <div id="target" style="margin:auto;background:grey;"></div>
 </body>
